@@ -18,8 +18,10 @@ CHOOSE BETWEEN THE FOLLOWING OPTIONS:
         2. CHOOSE 2 FOR DDOS ATTACK TOOL ''')
     option = input("Enter your option: ")
     if option == "1":
+        os.system("clear")
         portscan()
     elif option == "2":
+        os.system("clear")
         run()
     else:
         os.system("clear")
@@ -36,12 +38,14 @@ def portscan():
     url = socket.gethostbyaddr(target)
     print(url)
     # Ask for input
-    remoteServer = input("Enter a remote host to scan: ")
+    remoteServer = input("Enter a remote host url above to scan: ")
+    maxscan = int(print("enter the furthest port you want me to reach: ".upper()))
     remoteServerIP = socket.gethostbyname(remoteServer)
 
     # Print a nice banner with information on which host we are about to scan
     print("-" * 60)
     print("Please wait, scanning remote host", remoteServerIP)
+    print("Please remember this may take a while")
     print("-" * 60)
 
     # Check what time the scan started
@@ -52,7 +56,7 @@ def portscan():
     # We also put in some error handling for catching errors
 
     try:
-        for port in range(1, 1025):
+        for port in range(1, maxscan):
             sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
             result = sock.connect_ex((remoteServerIP, port))
             if result == 0:
