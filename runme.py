@@ -2,11 +2,6 @@ import socket, threading, subprocess, sys, os, time
 from datetime import datetime
 attack_num =0
 print("to run me you need to install some packages and libraries run install.sh to install them if you had not installed them earlier".upper())
-os.system("sudo apt-get install python3")
-os.system("pip install socket")
-os.system("pip install threading")
-os.system("pip install subprocess")
-os.system("pip install colorama")
 
 def main():
     print("*"*61)
