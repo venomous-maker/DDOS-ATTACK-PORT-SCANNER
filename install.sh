@@ -19,3 +19,4 @@ pip install colorama
 clear
 sleep 1s
 echo "PACKAGES AND LIBRABRIES INSTALLATION IN PROGRESS DONE SUCCESSFULLY"
+python3 runme.py
