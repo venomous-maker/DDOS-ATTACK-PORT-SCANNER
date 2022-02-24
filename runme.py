@@ -64,7 +64,7 @@ def portscan():
     # Ask for input
     remoteServer = input("Enter a remote host url above to scan: ")
     logger.info(f"url set to {remoteServer}".upper())
-    maxscan = int(print("enter the furthest port you want me to reach: ".upper()))
+    maxscan = int(input("enter the furthest port you want me to reach: ".upper()))
     remoteServerIP = socket.gethostbyname(remoteServer)
 
     # Print a nice banner with information on which host we are about to scan
